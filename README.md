@@ -1,2 +1,2 @@
-# portfolio
+# Home
 Design Portfolio
