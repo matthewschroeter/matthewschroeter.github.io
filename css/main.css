@@ -2,6 +2,10 @@ body {
     margin: 30px auto;
     width: 70%;
 }
+
+body{
+    background-color: lightblue;
+}
 nav ul, footer ul {
     font-family:'Georgia', 'Serif';
     padding: 0px;
