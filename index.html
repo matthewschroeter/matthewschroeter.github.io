@@ -1,170 +1,279 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html class="no-js" lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>My Portfolio</title>
-  <meta name="description" content="An awesome site that showcases my work!">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!--link rel="stylesheet" href="css/normalize.css">-->
-  <link rel="stylesheet" href="css/main.css">
-  <style>
-  .about .image{
-    img {
-    float: left;
-      }
-    }
-    
-      .projects .image{
-    img {
-    float: left;
-      }
-    }
-</style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Portfolio</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body>
-  <header>
-    <h1>My Portfolio</h1>
-    <nav>
-      <ul>
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="#about">About</a>
-        </li>
-        <li>
-          <a href="#projects">Projects</a>
-        </li>
-        <li>
-          <a href="#resume">Resume</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section id = "about" class="about">
-      <h1>About Me</h1>
-      <div class="image">
-        <img src="Profile Picture.jpeg" alt="Profile Picture"
-              style="width:170px;height:170px;margin-right:15px;">
-
-      </div>
-        <p>
-         My name is Matthew Schroeter and I am a 4th Year Student at Northeastern University studying Bioengineering and Robotics.
-        </p>
-     <!--<img src="http://via.placeholder.com/800x400" alt="Placeholder image">-->
-      
-      
-    </section>
-    <section id ="projects" class = "projects">
-      <h2>Projects</h2>
-          <article>
-            <header>
-              <h3>Undergraduate Research</h3>
-            </header> 
-           <p>
-             I am a member of the Silicon Synapse Robotics Lab at Northeastern. It is a bio-inspired robotics lab run by Dr. Alireza Ramezani.
-           </p>
-           <footer>
-             <a href="https://web.northeastern.edu/silicon-synapse/">See More</a>
-           </footer>
-          </article>
-        <article>
-           <header>
-              <h3>NASA BIG Idea Challenge</h3>
-            </header>
-          <h3>Overview</h3>
-            <p>
-              Member of the Northeastern Team participating in the NASA BIG Idea Challenge. 
-              The challenge was to develop a system that could be used in future missions to explore the permanently shadowed regions (PSRs) of the moon.
-            </p>
-          <h3>Problem</h3>
-          <p>
-             I worked on the Mechanical sub-team developing a module that would sit on the edge of the PSR to collect solar energy.
-             The energy would be stored in batteries and used to charge an exploratory rover that would make repeated trips into the PSR to gather information and samples
-             My specific task was to design a mechanism that could be used to deploy the solar panels from a small stowed state to a sufficient height dependent on the number of solar panels and energy generation.
-             The specific requirements we developed were to deploy a solar panel mass of 1.5 kilograms from a stowed height of 0.15 meters to 1.5 meters, an expansion ratio of 10.
-          </p>
-          <h3>Approach</h3>
-        <div class="image">
-            <img src="Isometric DOGHOUSE.png" alt="Profile Picture"
-            style="width:450px;height:300px;margin-right:15px;">
+    <div id="mobile-menu-open" class="shadow-large">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+    <!-- End #mobile-menu-toggle -->
+    <header>
+        <div id="mobile-menu-close">
+            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
         </div>
-          
-          <p>
-            Through brainstorming as a team, we considered many different methods of deploying the solar panels ranging from mechanisms, like scissor lifts, to shape-memory composite materials. 
-            Eventually, the car power antenna mechanism was brought up. This mechanism is used in all modern cars and involves a telescoping antenna that is driven by a motor and flexible gear rack.
-            The flexible gear is coiled compactly inside of a housing and is driven by a gear which is turned by the motor. This mechanism was attractive because of it's large expansion ratio. 
-            We decided to emulate this design and create a larger version of it for our solar panel deployment. We developed 3 modules from this design, the first was the telescoping rods which provided structure to the system once it was deployed. 
-            Secondly, there were the solar panels, which also had to be folded and then easily unfolded as the telescoping rods were driven upwards. We decided on folding the solar panels like an accordion. The third module was the mechanism that would drive the antenna upwards, which I worked on with one other student.
-            Initially, we considered using a motor to drive deployment, but decided to use a torque spring instead. The spring reduced the complexity of the system and reduced energy usage in the critical time before the solar panels are deployed.
-            I performed hand calculations to determine the torque that the load would apply to the springs. After discussing the calculations, we researched and selected a spring with the correct torque and dimensions. 
-            Next, the prototyping phase began, where I independently developed all CAD, designing components such as housing for the flexible gear rack and the torque springs and a base to connect it all. I also researched and purchased all materials for prototyping such as aluminum shafts, shaft coupler and more. 
-            Before using a flexible gear rack we tried to push a plastic filament out of a cylindrical housing by pushing from the back. There was too much friction with the filament pressing against the sides. Then, we looked into the car power antenna mechanism and noticed how they used a driving gear and a flexible plastic gear rack.
-            We then purchased our own flexible gear rack and designed a geared plastic housing for the springs. This way when the springs turned the gear would turn and the driving would mesh with the gear rack driving it upwards.
-            After the switch to a gear and flexible gear rack we had much better transfer of force from the springs, however there was still too much friction and the flexible gear rack would get tangled inside of its housing. We then decided to design a guide inside of the flexible gear rack housing. This guide served as a track for the gear rack to lie on, it constrained its motion so that it would be driven out without jamming. 
-            It also reduced the surface area of the gear rack that was in contact with the guide, reducing the friction. After testing we also decided to increase the number of torque springs to overcome the friction. Initially, we were only using one torque spring, but the final design used three torque springs.
-            
-          </p>
-          <img src="Cross-Section Diagram.png" alt="Placeholder image">
-          
-          <h3>Skills Used</h3>
-          <p> 
-            Computer Aided Design (SolidWorks),
-            Rapid Prototyping,
-            3D Printing,
-            Requirements Specifications,
-            Failure Modes and Effects Analysis,
-            Root Cause Analysis,
-            Sourcing Materials,
-            Design Analysis (Design Trade-off),
-            Hand Calculations,
-            Teamwork and Communication,
-            System Integration,
-            Presenting technical concepts 
-          </p>
-          
-          <h3>Results</h3>
-          
-          <p>
-            After using three torque springs and a guide to reduce friction, our system was successfully able to drive more than 1.5 meters the flexible gear rack out of its housing. 
-            This test was successfully repeated more than 15 times. Next, I worked on assisting in the design of the telescoping rods. Once the telescoping rods were completed, I worked to integrate the driving mechanism with the telescoping rods.
-            The end of the flexible gear was fixed to the top-most rod to be driven to the height of 1.5 meters. We were not able to construct the solar panels so we used steel washers as weights to simulate the weight of the solar panels. 
-            With 0.5 kg of weight we were able to achieve 80% of the desired height or 1.2 meters. We presented these results to judges made up of NASA engineers and received awards for perseverance and most creative concept as a whole. 
-            I personally presented these designs and testing results during my section of the presentation and answered questions from judges about the design. 
-   
-          </p> 
-            <h3>Final Design</h3>
-            <img src="Torque Spring Mechanism Diagram.png" alt="Placeholder image">
-         
-            <footer>
-              <p>
-                <a href="http://bigidea.nianet.org/past-competition-themes/2020-competition/">See More</a>
-              </p>
-            </footer>
-          </article>
-    </section>
-  </main>
-  <section id = "contact">
-        <h4>Contact Info<h4>
-        <p>
-          Email: <a href="mailto:matthewtschroeter@gmail.com">matthewtschroeter@gmail.com</a>
-        </p>
-        <p>
-          Phone: (123) 867-5309
-        </p>
-    
-  </section>
-  <footer>
-     <p>&copy; 2021 - Matthew Schroeter - All rights reserved</p>
-  </footer>
+        <ul id="menu" class="shadow">
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+            <li>
+                <a href="#education">Education</a>
+            </li>
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </header>
+    <!-- End header -->
+
+    <div id="lead">
+        <div id="lead-content">
+            <h1>Ryan Fitzgerald</h1>
+            <h2>Software Engineer</h2>
+            <a href="#" class="btn-rounded-white">Download Resume</a>
+        </div>
+        <!-- End #lead-content -->
+
+        <div id="lead-overlay"></div>
+
+        <div id="lead-down">
+            <span>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </span>
+        </div>
+        <!-- End #lead-down -->
+    </div>
+    <!-- End #lead -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="heading">About Me</h2>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat. Donec
+                        eu vehicula neque. Donec viverra lorem nunc, tempus euismod eros sollicitudin ut. Quisque et tincidunt libero. Donec id pharetra justo. Proin euismod lacinia dolor, eu scelerisque justo tempus pharetra. Vivamus nunc justo, finibus
+                        ut nisl sed, euismod rhoncus nulla. Proin sed magna egestas, egestas ante et, congue eros. In consequat, mauris dapibus tincidunt suscipit, ex libero aliquet diam, at maximus risus enim non leo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End #about -->
+
+    <div id="experience" class="background-alt">
+        <h2 class="heading">Experience</h2>
+        <div id="experience-timeline">
+            <div data-date="September 2015 – September 2016">
+                <h3>Employer Name</h3>
+                <h4>Job Title</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                </p>
+            </div>
+
+            <div data-date="September 2015 – September 2016">
+                <h3>Employer Name</h3>
+                <h4>Job Title</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                </p>
+            </div>
+
+            <div data-date="September 2015 – September 2016">
+                <h3>Employer Name</h3>
+                <h4>Job Title</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- End #experience -->
+
+    <div id="education">
+        <h2 class="heading">Education</h2>
+        <div class="education-block">
+            <h3>University of Ottawa</h3>
+            <span class="education-date">Sept 2016 - Sept 2017</span>
+            <h4>Bachelor of Science in Computer Science</h4>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+            </p>
+        </div>
+        <!-- End .education-block -->
+
+        <div class="education-block">
+            <h3>University of Ottawa</h3>
+            <span class="education-date">Sept 2016 - Sept 2017</span>
+            <h4>Bachelor of Science in Computer Science</h4>
+            <ul>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </li>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </li>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </li>
+            </ul>
+        </div>
+        <!-- End .education-block -->
+    </div>
+    <!-- End #education -->
+
+    <div id="projects" class="background-alt">
+        <h2 class="heading">Projects</h2>
+        <div class="container">
+            <div class="row">
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/project.jpg" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Project Name Here</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                        </p>
+                        <a href="#">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/project.jpg" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Project Name Here</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                        </p>
+                        <a href="#">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+            </div>
+        </div>
+    </div>
+    <!-- End #projects -->
+
+    <div id="skills">
+        <h2 class="heading">Skills</h2>
+        <ul>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Ruby</li>
+            <li>Go</li>
+            <li>Node.js</li>
+            <li>AngularJs</li>
+            <li>React</li>
+            <li>Elixir</li>
+            <li>Java</li>
+            <li>C</li>
+            <li>C#</li>
+            <li>C++</li>
+            <li>Ruby on Rails</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Ruby</li>
+            <li>Go</li>
+            <li>Node.js</li>
+            <li>AngularJs</li>
+            <li>React</li>
+            <li>Elixir</li>
+            <li>Java</li>
+            <li>C</li>
+            <li>C#</li>
+            <li>C++</li>
+            <li>Ruby on Rails</li>
+        </ul>
+    </div>
+    <!-- End #skills -->
+
+    <div id="contact">
+        <h2>Get in Touch</h2>
+        <div id="contact-form">
+            <form method="POST" action="https://formspree.io/email@email.com">
+                <input type="hidden" name="_subject" value="Contact request from personal website" />
+                <input type="email" name="_replyto" placeholder="Your email" required>
+                <textarea name="message" placeholder="Your message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <!-- End #contact-form -->
+    </div>
+    <!-- End #contact -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>
+                        Copyright &copy; 2020 YOUR NAME
+                    </p>
+                </div>
+                <div class="col-sm-2 top">
+                    <span id="to-top">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://stackoverflow.com/" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/scripts.min.js"></script>
 </body>
 
 </html>
-
